@@ -13,3 +13,9 @@ lvremove /dev/pve/data
 lvresize -l +100%FREE /dev/pve/root
 
 resize2fs /dev/mapper/pve-root
+
+---------------------------------------------
+
+or if ur way too lazy like me run this:
+
+`curl https://raw.githubusercontent.com/QXIoa/PVELVMFix/refs/heads/main/lvmfix.sh | bash`
