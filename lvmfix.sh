@@ -9,8 +9,8 @@ set -e
 ###############################################################################
 
 echo doing!!
-pvesm remove local-lvm
-lvremove /dev/pve/data
+yes | pvesm remove local-lvm
+yes | lvremove /dev/pve/data
 lvresize -l +100%FREE /dev/pve/root
 resize2fs /dev/mapper/pve-root
 
